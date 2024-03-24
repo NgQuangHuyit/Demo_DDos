@@ -20,4 +20,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(port=server_port)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=server_port)
